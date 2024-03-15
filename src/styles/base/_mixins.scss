@@ -1,0 +1,86 @@
+@use "variables" as v;
+
+/** Media Queries **/
+@mixin mobile {
+  @media (min-width: 150px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) and (max-width: 2000px) {
+    @content;
+  }
+}
+
+@mixin button($bgColor, $colorTexto, $width, $height) {
+  background-color: $bgColor;
+  color: $colorTexto;
+  text-align: center;
+  font-family: v.$font_primary;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  width: $width;
+  height: $height;
+  border-radius: 1rem;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 200ms linear;
+  padding: 0 30px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border: none;
+  box-shadow: 0 8px 24px 0 rgba(255, 235, 167, 0.2);
+
+  @include mobile {
+    min-width: 200px;
+  }
+
+  &:hover {
+    background-color: lighten(v.$primary, 20%);
+    cursor: pointer;
+  }
+
+  &:active,
+  &:focus {
+    background-color: #102770;
+    color: v.$white;
+    box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
+  }
+  &:hover {
+    color: v.$white;
+    box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
+    cursor: pointer;
+  }
+}
+
+@mixin input() {
+  padding-left: 55px;
+  height: 38px;
+  width: 100%;
+  min-width: 400px;
+  font-weight: 400;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  color: #858585;
+  background-color: v.$white;
+  border: 1px solid v.$gray;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  position: relative;
+
+  @include mobile {
+    min-width: 90%;
+  }
+}

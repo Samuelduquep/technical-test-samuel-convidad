@@ -1,0 +1,131 @@
+@use "../styles/base/variables" as v;
+@use "../styles/base/mixins" as m;
+
+.container_sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: v.$primary;
+  box-shadow: 22px 0px 50px -18px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  width: 20%;
+  min-width: 50px;
+
+  @include m.mobile {
+    min-width: 50px;
+    width: 50px;
+    padding: 0rem;
+  }
+
+  .sidebar_user {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20%;
+    padding: 5px;
+
+    div:nth-child(1) {
+      width: 80px;
+
+      svg {
+        color: v.$primary;
+      }
+    }
+  }
+
+  h2 {
+    text-align: center;
+    color: v.$contrast;
+    @include m.mobile {
+      rotate: -90deg;
+      width: 100%;
+      font-size: 100%;
+      margin: 0;
+      margin-top: 5rem;
+      text-align: center;
+    }
+  }
+}
+
+.container_navbar {
+  height: 100%;
+  overflow: hidden;
+
+  .navbar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 1rem;
+      height: 100%;
+      margin: 0;
+      margin-top: 5rem;
+      padding: 0;
+
+      @include m.mobile {
+        padding: 0;
+        align-items: center;
+      }
+
+      a {
+        margin: 0 0;
+        gap: 1rem;
+        font-family: v.$font_primary;
+        color: v.$white;
+        padding: 0.8rem 5rem;
+        width: 100%;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease-in-out;
+        font-weight: bold;
+        @include m.mobile {
+          padding: 0.5rem 2rem;
+        }
+        &:hover {
+          background-color: v.$primary-light;
+          span {
+            color: v.$white;
+          }
+        }
+        li {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 1rem;
+          margin: 1rem 0;
+        }
+
+        img {
+          width: 50px;
+          margin: 0;
+        }
+
+        span {
+          font-size: 12pt;
+          transition: 0.3s;
+
+          @include m.mobile {
+            display: none;
+          }
+        }
+      }
+
+      @include m.mobile {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+.active_page {
+  background-color: lighten($color: v.$primary, $amount: 15);
+  border-radius: 1rem;
+  span {
+    color: v.$primary;
+  }
+}

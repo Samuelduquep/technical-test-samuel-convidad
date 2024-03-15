@@ -1,0 +1,42 @@
+@use "../../styles/base/variables" as v;
+@use "../../styles/base/mixins" as m;
+
+.custom_table {
+  th {
+    background-color: #f0f0f0;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f8f8f8;
+  }
+}
+
+.container_grid {
+  width: 90%;
+  height: 90%;
+  margin: 2rem 0;
+  overflow: auto;
+  padding: 2rem;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+.weather_spin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.weather_error_message {
+  background-color: v.$error;
+  border-radius: 1rem;
+
+  p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+    color: v.$white;
+  }
+}

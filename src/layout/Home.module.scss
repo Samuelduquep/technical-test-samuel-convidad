@@ -1,0 +1,32 @@
+@use "../styles/base/variables" as v;
+@use "../styles/base/mixins" as m;
+
+.container_area {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
+  background-color: lighten($color: v.$primary, $amount: 73);
+}
+
+.container_outlet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.sidebar_area {
+  @include m.mobile {
+    width: 20%;
+  }
+
+  @include m.tablet {
+    width: 20%;
+  }
+
+  @include m.desktop {
+    width: 22%;
+  }
+}
