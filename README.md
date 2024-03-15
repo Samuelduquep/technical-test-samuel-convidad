@@ -1,4 +1,32 @@
-# React + TypeScript + Vite
+# CONVIDAD TECHNICAL TEST
+
+# DESCRIPTION
+
+This application is built using React Vite. It displays a main layout with a navigation menu that calls the weather API and loads the data into a grid, utilizing an Ant Design component. The second menu item is a form consisting of three inputs, which are validated before submission. The design allows for scalability.
+
+## 🚀 Getting Started:
+
+In the project directory, you can run:
+
+### `npm run dev`
+
+Runs the app in development mode.
+Open localhost to view it in your browser.
+
+The page will reload if you make edits.
+You will also see lint errors in the console.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified, and the filenames include the hashes.
+Your app is ready to be deployed!
+
+
+
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
