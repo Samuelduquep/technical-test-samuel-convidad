@@ -2,7 +2,8 @@
 @use "../../styles/base/mixins" as m;
 
 .container_form {
-  width: 50%;
+  width: 60%;
+  min-width: 400px;
   padding: 2rem;
   height: 100%;
   display: flex;
